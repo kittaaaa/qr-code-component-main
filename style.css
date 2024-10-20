@@ -1,0 +1,79 @@
+:root {
+    --card-bg: hsl(0, 0%, 100%);
+    --card-text: hsl(218, 44%, 22%);
+    --ss: hsl(216, 15%, 48%);
+    --main-bg: hsl(212, 45%, 89%);
+
+    --flow-space-1: 1rem;
+    --flow-space-2: 2rem;
+}
+html {
+    font-size: 15px;
+}
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+main {
+    width: inherit;
+    min-height: inherit;
+    color: var(--card-text);
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 90%;
+    max-width: 450px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    text-align: center;
+}
+.card__img {
+    border-radius: 12px;
+}
+.card__content p:first-of-type{
+    /* padding: 2rem; */
+    font-size: 1.2em;
+}
+.card__content  > * + * {
+    margin-top: var(--flow-space-1);
+}
+.card__content__title {
+    color: var(--card-text);
+}
+.card__content__text {
+    color: var(--ss);
+}
+
+/* utitlities */
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
